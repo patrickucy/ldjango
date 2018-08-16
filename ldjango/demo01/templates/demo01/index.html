@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'demo01/style.css' %}">
     <title>Index</title>
 </head>
 <body>
+
 
 {% if latest_question_list %}
 <ul>

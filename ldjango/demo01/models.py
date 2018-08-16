@@ -15,6 +15,11 @@ class Question(models.Model):
         now = timezone.now()
         return now - datetime.timedelta(days=1) <= self.pub_date <= now
 
+    # # WHAT THE HELL IS THIS? assigning values to a method?
+    # was_published_recently.admin_order_field = 'pub_date'
+    # was_published_recently.boolean = True
+    # was_published_recently.shout_description = 'Published recently?'
+
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
