@@ -30,13 +30,13 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'demo01.apps.Demo01Config',  # plug-in this app to Django
-    'demo02.apps.Demo02Config',  # plug-in this app to Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'demo02',  # install this app
 ]
 
 MIDDLEWARE = [

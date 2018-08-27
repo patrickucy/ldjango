@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h1>User List</h1>
+<ul>
+    {% for row in posts.object_list %}
+    <li> {{ row.name }}</li>
+    {% endfor %}
+    <div>
+        {% if posts.has_previous %}
+        <a href="index.html?page={{posts.previous_page_number}}">Previous</a>
+        {% endif %}
+    </div>
+    <br>
+
+    <br>
+    <div>
+        {% if posts.has_next %}
+        <a href="index.html?page={{posts.next_page_number}}">Next</a>
+        {% endif %}
+    </div>
+</ul>
+</body>
+</html>
