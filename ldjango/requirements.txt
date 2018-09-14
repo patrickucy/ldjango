@@ -1,0 +1,15 @@
+# -----django (web framework) -----
+django==2.1.1
+
+# ----- celery (task queue)-----
+amqp==2.3.2 
+billiard==3.5.0.4 
+celery==4.2.1 
+kombu==4.2.1 
+vine==1.1.4
+
+django-celery-results==1.0.1 # Using the Django ORM/Cache as a result backend
+django-celery-beat==1.1.1  # Database-backed Periodic Tasks
+
+# ----- redis (cache, message broker) -----
+redis==2.10.6
