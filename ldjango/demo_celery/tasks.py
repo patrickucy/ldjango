@@ -1,19 +1,12 @@
 # coding=utf-8
+import time
 from celery import shared_task
 
 
 @shared_task
-def async_task_add(x, y):
-    print("async_add()")
-    return x + y
+def send_email(mail):
+    print('sending mail ...' + mail['to'])
+    time.sleep(2.0)
+    print('mail sent.')
 
-
-@shared_task
-def async_task_mul(x, y):
-    return x * y
-
-
-@shared_task
-def async_task_xsum(numbers):
-    return sum(numbers)
 
