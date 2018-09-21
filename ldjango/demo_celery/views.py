@@ -1,6 +1,8 @@
 from django.shortcuts import render, HttpResponse
 from django.http import JsonResponse
-from .tasks import send_email
+from demo_celery import tasks
+import celery
+import redis
 
 
 # Create your views here.
@@ -11,8 +13,17 @@ def index(request):
 
 
 def test(request):
-    print("celery test: ")
-    aysnc_rst = send_email.delay(dict(to='test@python.org'))
+    rst = tasks.send_email.delay(dict(to='test@qq.com'))  # don't forget to use tasks.[task_name].delay([task_params])
+    print(rst)
     return JsonResponse({
-        "result": aysnc_rst
+        "result": rst.task_id
+    })
+
+
+def test2(request):
+    rids = redis.StrictRedis(host='127.0.0.1', port=6379)
+    rids.set('name', 'jack')
+
+    return JsonResponse({
+        "test2": "test2"
     })

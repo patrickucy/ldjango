@@ -6,6 +6,7 @@ app_name = "demo_celery"
 
 urlpatterns = [
     path(r'', views.index),
-    path(r'test/', views.test)
+    path(r'test/', views.test),
+    path(r'test2/', views.test2)
 ]
 
