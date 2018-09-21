@@ -1,7 +1,7 @@
 # -----django (web framework) -----
 django==2.1.1
 
-# ----- celery (task queue)-----
+# ----- celery (async tasks)-----
 amqp==2.3.2 
 billiard==3.5.0.4 
 celery==4.2.1 

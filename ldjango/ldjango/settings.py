@@ -24,7 +24,13 @@ SECRET_KEY = '#5)(xl-j=-5a+o_5=6oome2iyu6igtihe)h@h849mu^xk_rdyb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+"""
+add this "*" here, and run this proxy at 0.0.0.0:8000. Then any computer within the internal network can access
+
+$ python manage.py runserver 0.0.0.0:8000
+
+"""
 
 # Application definition
 
