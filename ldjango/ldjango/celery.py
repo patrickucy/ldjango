@@ -5,7 +5,12 @@ from django.conf import settings
 """
 Run command under the directory of your project. Namely one level up
 
-$ celery -A ldjango worker -l info
+$ celery -A ldjango worker -l info // run a async task
+
+$ celery -A ldjango beat -l info -S django // start the celery beat service using the django scheduler
+
+// start redis
+$ /etc/init.d/redis-server start
 """
 # set the default Django settings module for the 'celery' program.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ldjango.settings')

@@ -1,3 +1,4 @@
+# coding=utf-8
 from django.shortcuts import render, HttpResponse
 from django.http import JsonResponse
 from demo_celery import tasks

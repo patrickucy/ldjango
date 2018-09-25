@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'demo02',  # install this app
-    'django_celery_beat',
+    'django_celery_beat',   # periodic tasks, you will have Periodic Tasks App with tables in DB
     'demo_celery'  # learn celery
 ]
 
